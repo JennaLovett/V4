@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Welcome to V4!</title>
-        <meta charset="utf-8"/>
-    </head>
-    <body>
-        
-    </body>
+  <head>
+    <title>Welcome to V4!</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/index.css" type="text/css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li style="float:left;">
+          <a href="#home"><strong>V4</strong></a>
+        </li>
+        <li class="hover"><a href="#contact">Contact</a></li>
+        <li class="hover"><a href="#about">About</a></li>
+        <li class="hover"><a href="#home">Home</a></li>
+      </ul>
+    </nav>
+
+    <main>
+        <h1>Welcome to V4!</h1>
+        <div class="login">
+            <h2>Login</h2>
+            <form>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email"placeholder="example@example.com" />
+
+                <label for="lname">Password</label>
+                <input type="password" id="password" name="password" placeholder="*******" />
+
+                <div class="center">
+                    <input type="submit" value="Submit" />
+                </div>
+                
+            </form>
+        </div>
+    </main>
+  </body>
 </html>
