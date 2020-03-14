@@ -32,9 +32,23 @@ li a {
 }
 
 /* welcome banner */
+main{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    background-image: url(/images/mainbackground.jpg);
+    background-size: 50%;
+    background-repeat: repeat-x;
+}
 h1 {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 0;
+    padding-top: 50px;
+    color: #FFE4B7; 
+    font-size: 50px;
+}
+.orange {
+    color: #C44900;
 }
 
 /* Login and Register Form */
