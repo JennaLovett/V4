@@ -37,7 +37,7 @@ li a
 }
 
 /* welcome banner */
-.login-container
+#login-container
 {
     margin: 0;
     padding: 100px 0px;
@@ -141,11 +141,11 @@ input[type=submit]:hover
 }
 
 /* About */
-.about
+#about
 {
     margin-bottom: 20px;
 }
-.about h1
+#about h1
 {
     color: #77AF9C;
     margin-top: 10px;
@@ -168,22 +168,22 @@ input[type=submit]:hover
 }
 
 /* Contact */
-.contact
+#contact
 {
     background-color: #77AF9C;
     text-align: center;
     margin: 0;
     padding: 100px 0px;
 }
-.contact h1
+#contact h1
 {
     color: #D7FFF1;
 }
-.contact h2
+#contact h2
 {
     color: #AAFCB8;
 }
-.contact h3, h4
+#contact h3, h4
 {
     color: #285943;
 }
