@@ -1,12 +1,14 @@
 /* Color palette: https://coolors.co/d7fff1-aafcb8-6aa36c-77af9c-285943   */ 
-body{
+body
+{
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Nav Bar */
-ul {
+ul 
+{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -14,11 +16,13 @@ ul {
     background-color: #285943;
 }
   
-li {
+li 
+{
     float: right;
 }
   
-li a {
+li a 
+{
     font-size: 20px;
     display: block;
     color: #D7FFF1;
@@ -27,31 +31,36 @@ li a {
     text-decoration: none;
 }
   
-.hover a:hover {
+.hover a:hover 
+{
     background-color: #183A37;
 }
 
 /* welcome banner */
-main{
+.login-container
+{
     margin: 0;
     padding: 100px 0px;
     background-image: url(/images/mainbackground.jpg);
     background-size: 100%;
     background-repeat: repeat-x;
 }
-h1 {
+h1
+{
     text-align: center;
     margin-top: 0;
     color: #AAFCB8; 
     font-size: 50px;
 }
-.orange {
+.orange 
+{
     color: #6AA36C;
     font-weight: bold;
 }
 
 /* Login and Register Form */
-.login {
+.login 
+{
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 40px;
@@ -60,12 +69,14 @@ h1 {
     margin-top: 60px;
 }
 
-h2 {
+h2 
+{
     margin-bottom: 20px;
     margin-top: 0px;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password] 
+{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0 15px 0;
@@ -75,7 +86,8 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
-.center {
+.center 
+{
     margin: auto;
     width: 100%;
     clear: both;
@@ -93,7 +105,8 @@ input[type=text], input[type=password] {
     float: right;
 }
 
-input[type=submit] {
+input[type=submit] 
+{
     width: 35%;
     background-color: rgb(24, 105, 99);
     color: white;
@@ -106,7 +119,8 @@ input[type=submit] {
     transition: background-color 0.6s;
 }
 
-#haveAccount {
+#haveAccount 
+{
     width: 45%;
     background-color: #f2f2f2;
     color: #04151F;
@@ -115,13 +129,36 @@ input[type=submit] {
     transition: text-decoration 0.8s, font-size 0.8s;
 }
 
-#haveAccount:hover {
+#haveAccount:hover 
+{
     text-decoration: underline;
     font-size: 13px;
 }
   
-input[type=submit]:hover {
+input[type=submit]:hover 
+{
     background-color: #183A37;
 }
 
 /* About */
+.about h1
+{
+    color: #77AF9C;
+    margin-top: 10px;
+}
+.about-container
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: auto;
+    width: 50%;
+    padding: 0px 20px;
+}
+.about-grid
+{
+    border: 1px solid #285943;
+    padding: 28px 32px;
+    text-align: center;
+    font-size: 22px;
+    margin: 10px 12px;
+}
