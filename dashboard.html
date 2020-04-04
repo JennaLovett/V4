@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="/css/index.css" type="text/css" />
 </head>
+
+
 <nav>
     <ul>
       <li style="float:left;"> 
@@ -11,31 +13,126 @@
       </li>
       <li class="hover"><a href="#contact">Contact</a></li>
       <li class="hover"><a href="#about">About</a></li>
-      <li class="hover"><a href="#login-container">Home</a></li>
+      <li class="hover"><a href="index.html">Home</a></li>
     </ul>
   </nav>
-<body>
     <div class="container">
         <div class="toppane">
-            <h1>Welcome Everrick Wright</h1>
+            <h1>Welcome, Everrick Wright</h1>
         </div>
     
         <div class="leftpane">
-            <div id="header">
-                <h3>Opportunities</h3>
+            <h3 id="h3l">Your Sessions</h3>
+                <button type="button" class="collapsible"><span>+</span> <strong>What you've posted</strong></button>
+            <div class="content">
+                <p>
+                        <strong><h4>Help with Algo, please!</h4></strong>
+                        
+                        <strong># of hours requested:</strong> 5 <br>
+                        <strong>Description:</strong> I need help with understanding dynamic programming and the knapsack problem</li>
+                    
+                    <br><hr>
+                        <strong><h4>Help with Algo, please!</h4></strong>
+                        
+                        <strong># of hours requested:</strong> 5 <br><br>
+                        <strong>Description:</strong> I need help with understanding dynamic programming and the knapsack problem
+                    
+                    <br><hr>
+                        <strong><h4>Help with Algo, please!</h4></strong>
+                        
+                        <strong># of hours requested:</strong> 5 <br>
+                        <strong>Description:</strong> I need help with understanding dynamic programming and the knapsack problem
+                    
+                    <br><hr>
+                        <strong><h4>Help with Algo, please!</h4></strong>
+                        
+                        <strong># of hours requested:</strong> 5 <br>
+                        <strong>Description:</strong> I need help with understanding dynamic programming and the knapsack problem
+                    
+                </p>
             </div>
-            
-        </div>
+            <button type="button" class="collapsible"><span>+</span> <strong>Your Past Sessions</strong></button>
+            <div class="content">
+                <p>
+                        <strong><h4>Help with Algo, please!</h4></strong>
+                        
+                        <strong># of hours requested:</strong> 5 <br>
+                        <strong>Description:</strong> I need help with understanding dynamic programming and the knapsack problem</li>
+                    
+                    <br><hr>
+                        <strong><h4>Help with Algo, please!</h4></strong>
+                        
+                        <strong># of hours requested:</strong> 5 <br><br>
+                        <strong>Description:</strong> I need help with understanding dynamic programming and the knapsack problem
+                    
+                    <br><hr>
+                        <strong><h4>Help with Algo, please!</h4></strong>
+                        
+                        <strong># of hours requested:</strong> 5 <br>
+                        <strong>Description:</strong> I need help with understanding dynamic programming and the knapsack problem
+                    
+                    <br><hr>
+                        <strong><h4>Help with Algo, please!</h4></strong>
+                        
+                        <strong># of hours requested:</strong> 5 <br>
+                        <strong>Description:</strong> I need help with understanding dynamic programming and the knapsack problem
+                    
+                </p>
+            </div>
+                <script>
+                    var coll = document.getElementsByClassName("collapsible");
+                    var i;
+                    
+                    for (i = 0; i < coll.length; i++) {
+                      coll[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        if (content.style.display === "block") {
+                          content.style.display = "none";
+                        } else {
+                          content.style.display = "block";
+                        }
+                      });
+                    }
+                </script>
+        </div> 
+
         <div class="middlepane">
-            <h3>Your Sessions</h3>
+            <h3 id="h3m">Opportunities Volunteered For</h3>
+                <div class="borders">
+                    <img src="/images/corgi.jpg" alt="Corgi" height="130" width="250">
+                <p class="p1">
+                    <strong>Help me walk Tinkles the Dog!</strong> <br> Unfortuntely due to my incomming work schedule, I am unable to walk my dog tinkles. <br><strong>Date Needed:</strong> 4/4/2020 <br><br><strong>Date Volunteered:</strong> 4/3/2020
+                </p>
+                </div>
+                
+                <div class="borders">
+                    <img src="/images/build.jpg" alt="house" height="130" width="250">
+                <p class="p1">
+                    <strong>Come build community houses with us!</strong> <br> Join BH4U (build houses for you) and help us build houses for locals.<br><strong>Date Needed:</strong> 4/10/2020 <br><br> <strong>Date Volunteered:</strong> 4/3/2020
+                </p>
+                </div>
+
+                <div class="borders">
+                    <img src="/images/cs.jpg" alt="house" height="130" width="250">
+                <p class="p1">
+                    <strong>Help tutor Computer Science Students!</strong> <br> Join BH4U (build houses for you) and help us build houses for locals.<br><strong>Date Needed:</strong> 4/10/2020 <br><br> <strong>Date Volunteered:</strong> 4/3/2020
+                </p>
+                </div>
+
+                <div class="borders">
+                    <img src="/images/build.jpg" alt="house" height="130" width="250">
+                <p class="p1">
+                    <strong>Come build community houses with us!</strong> <br> Join BH4U (build houses for you) and help us build houses for locals.<br><strong>Date Needed:</strong> 4/10/2020 <br><br> <strong>Date Volunteered:</strong> 4/3/2020
+                </p>
+                </div>
         </div>
 
         <div class="rightpane">
-            <h3>Statistics</h3>
+            <h3 id="h3r">Statistics</h3>
         </div>
-    </div>
 
-</body>
+    </div>
   
 
 </html>

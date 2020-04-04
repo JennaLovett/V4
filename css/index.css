@@ -189,26 +189,7 @@ input[type=submit]:hover
 }
 
 /*dashboard page*/
-a.button7{
-    
-    justify-content: center;
-    padding: 0.7em 1.7em;
-    margin:0 0.3em 0.3em 0;
-    border-radius:0.2em;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Roboto',sans-serif;
-    font-weight:400;
-    color:#FFFFFF;
-    background-color:#3369ff;
-    box-shadow:inset 0 -0.6em 1em -0.35em rgba(0,0,0,0.17),inset 0 0.6em 2em -0.3em rgba(255,255,255,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
-    text-align:center;
-    position:relative;
-    }
-    a.button7:active{
-    box-shadow:inset 0 0.6em 2em -0.3em rgba(0,0,0,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
-    }
-    
+
     body, html {
         width: 100%;
         height: 100%;
@@ -221,24 +202,33 @@ a.button7{
       }
       /*opportunites */
       .leftpane {
-          display: flex;
-          justify-content: center;
           width: 25%;
           height: 100%;
           float: left;
-          border-collapse: collapse;
+         
           
       }
       /*Your Sessions */
       .middlepane {
-        display: flex;
-        justify-content: center;
           width: 50%;
           height: 100%;
           float: left;
+      }
+      /*Statistics */
+      #h3m, #h3l, #h3r{
+        width: none;
+        height: none;
+        justify-content: center;
+        white-space: pre-line;
+        text-align: center;
+    }
+      .p1{
+          text-align: left;
+          width: none;
+          height: none;
+          justify-content: unset;
           
-      }/*Statistics */
-      
+      }
       .rightpane {
         display: flex;
         justify-content: center;
@@ -259,3 +249,39 @@ a.button7{
       .header {
           margin: 50px;
       }
+
+      img{
+        float: right;
+      }
+
+      .borders{
+          border: solid black 1px;
+          padding: 15px;
+      }
+
+      .collapsible {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+      }
+      
+      /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+      .active, .collapsible:hover {
+        background-color: #ccc;
+      }
+      
+      /* Style the collapsible content. Note: hidden by default */
+      .content {
+        padding: 0 18px;
+        display: none;
+        overflow: visible;
+        background-color: #f1f1f1;
+        text-align: left;
+      }
+      
