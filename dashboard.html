@@ -11,9 +11,11 @@
       <li style="float:left;"> 
         <a href="#home" style="color: #183A37;"><strong>V4</strong></a>
       </li>
-      <li class="hover"><a href="#contact">Contact</a></li>
-      <li class="hover"><a href="#about">About</a></li>
-      <li class="hover"><a href="index.html">Home</a></li>
+                <li class="hover"><a href="#contact">Contact</a></li>
+                <li class="hover"><a href="#post">Post</a></li>
+                <li class="hover"><a href="#rewards">Rewards</a></li>
+                <li class="hover"><a href="#volunteer">Volunteer</a></li>
+                <li class="hover"><a href="dashboard.html">Dashboard</a></li>
     </ul>
   </nav>
     <div class="container">
@@ -34,7 +36,7 @@
                     <br><hr>
                         <strong><h4>Help with Algo, please!</h4></strong>
                         
-                        <strong># of hours requested:</strong> 5 <br><br>
+                        <strong># of hours requested:</strong> 5 <br>
                         <strong>Description:</strong> I need help with understanding dynamic programming and the knapsack problem
                     
                     <br><hr>
@@ -62,7 +64,7 @@
                     <br><hr>
                         <strong><h4>Help with Algo, please!</h4></strong>
                         
-                        <strong># of hours requested:</strong> 5 <br><br>
+                        <strong># of hours requested:</strong> 5 <br>
                         <strong>Description:</strong> I need help with understanding dynamic programming and the knapsack problem
                     
                     <br><hr>
@@ -100,6 +102,8 @@
         <div class="middlepane">
             <h3 id="h3m">Opportunities Volunteered For</h3>
                 <div class="borders">
+                   <!--- <div><button type="button" value="null" id="button">X</button></div> -->
+                    
                     <img src="/images/corgi.jpg" alt="Corgi" height="130" width="250">
                 <p class="p1">
                     <strong>Help me walk Tinkles the Dog!</strong> <br> Unfortuntely due to my incomming work schedule, I am unable to walk my dog tinkles. <br><strong>Date Needed:</strong> 4/4/2020 <br><br><strong>Date Volunteered:</strong> 4/3/2020
@@ -130,9 +134,35 @@
 
         <div class="rightpane">
             <h3 id="h3r">Statistics</h3>
+            <div id="piechart"></div>
+            <!-- google pie chart-->
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+            <script type="text/javascript">
+                // Load google charts
+                google.charts.load('current', {'packages':['corechart']});
+                google.charts.setOnLoadCallback(drawChart);
+                
+                // Draw the chart and set the chart values
+                function drawChart() {
+                  var data = google.visualization.arrayToDataTable([
+                  ['Tasks Completed', 'Hours Volunteered'],
+                  ['Walking Tinkles', 3],
+                  ['Build for BH4U', 10],
+                  ['Tutor', 3],
+                  
+                ]);
+                
+                  // Optional; add a title and set the width and height of the chart
+                  var options = {'title':'Your V4 Statistics', 'width':280, 'height':200};
+                
+                  // Display the chart inside the <div> element with id="piechart"
+                  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                  chart.draw(data, options);
+                }
+                </script>
         </div>
 
     </div>
-  
 
 </html>
