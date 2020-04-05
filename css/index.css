@@ -170,6 +170,14 @@ input[type=submit]:hover
     text-align: center;
     font-size: 22px;
     margin: 10px 12px;
+    transition: font-size 0.8s, background-color 0.8s, border 0.8s;
+}
+
+.about-grid:hover
+{
+    background-color: #AAFCB8;
+    font-size: 24px;
+    border: 2px solid #285943;
 }
 
 /* Contact */
