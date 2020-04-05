@@ -31,7 +31,7 @@
                 <input type="password" id="password" name="password" placeholder="*******" />
 
                 <div class="center">
-                    <input type="button" value="Already have an account?" class="left" id="haveAccount"/>
+                    <input type="button" value="Need an Account?" class="left" id="needAccount"/>
                     <input type="submit" value="Submit" class="right"/>
                 </div>
             </form>
@@ -81,5 +81,22 @@
         <h4>Support available 24/7</h4>
       </div>
     </main>
+
+    <script>
+      $(document).ready(function(){
+        
+        //hide login and show signup on need account button click
+        $("#needAccount").click(function(){
+          $(".login").css("display", "none");
+          $(".signup").css("display", "block");
+        });
+
+        //hide signup and show login on have account button click
+        $("#haveAccount").click(function(){
+          $(".signup").css("display", "none");
+          $(".login").css("display", "block");
+        });
+      });
+    </script>
   </body>
 </html>
