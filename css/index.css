@@ -59,7 +59,7 @@ h1
 }
 
 /* Login and Register Form */
-.login 
+.login, .signup
 {
     border-radius: 5px;
     background-color: #f2f2f2;
@@ -86,6 +86,11 @@ input[type=text], input[type=password]
     box-sizing: border-box;
 }
 
+.third input[type=text]
+{
+    
+}
+
 .center 
 {
     margin: auto;
@@ -105,13 +110,13 @@ input[type=text], input[type=password]
     float: right;
 }
 
-input[type=submit] 
+input[type=submit], input[type=button] 
 {
     width: 35%;
     background-color: rgb(24, 105, 99);
     color: white;
     padding: 14px 18px;
-    font-size: 14px;
+    font-size: 18px;
     margin-top: 8px;
     border: none;
     border-radius: 5px;
@@ -119,7 +124,7 @@ input[type=submit]
     transition: background-color 0.6s;
 }
 
-#haveAccount 
+#haveAccount, #needAccount 
 {
     width: 45%;
     background-color: #f2f2f2;
@@ -129,7 +134,7 @@ input[type=submit]
     transition: text-decoration 0.8s, font-size 0.8s;
 }
 
-#haveAccount:hover 
+#haveAccount:hover, #needAccount:hover 
 {
     text-decoration: underline;
     font-size: 13px;
@@ -165,6 +170,14 @@ input[type=submit]:hover
     text-align: center;
     font-size: 22px;
     margin: 10px 12px;
+    transition: font-size 0.8s, background-color 0.8s, border 0.8s;
+}
+
+.about-grid:hover
+{
+    background-color: #AAFCB8;
+    font-size: 24px;
+    border: 2px solid #285943;
 }
 
 /* Contact */
