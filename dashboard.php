@@ -1,11 +1,14 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="/css/index.css" type="text/css" />
+    <link rel="stylesheet" href="/V4-project/V4/css/index.css" type="text/css" />
 </head>
 
-
+<body>
 <nav>
     <ul>
       <li style="float:left;"> 
@@ -20,7 +23,7 @@
   </nav>
     <div class="container">
         <div class="toppane">
-            <h1>Welcome, Everrick Wright</h1>
+            <h1>Welcome, <?php echo $_SESSION['login_user']; ?></h1>
         </div>
     
         <div class="leftpane">
@@ -160,9 +163,10 @@
                   var chart = new google.visualization.PieChart(document.getElementById('piechart'));
                   chart.draw(data, options);
                 }
-                </script>
+            </script>
         </div>
 
     </div>
+</body>
 
 </html>
