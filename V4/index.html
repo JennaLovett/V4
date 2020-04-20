@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to V4</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/V4/css/index.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li style="float:left;"> 
+          <a href="#home" style="color: #183A37;"><strong>V4</strong></a>
+        </li>
+        <li class="hover"><a href="#contact">Contact</a></li>
+        <li class="hover"><a href="#about">About</a></li>
+        <li class="hover"><a href="#login-container">Home</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div id="login-container">
+        <h1>Welcome to <span class="orange">V4</span></h1>
+        <div class="login">
+            <h2>Login</h2>
+            <form name="login" action="index.php" method="POST">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="example@example.com" />
+
+                <label for="lname">Password</label>
+                <input type="password" id="password" name="password" placeholder="*******" />
+
+                <div class="center">
+                    <input type="button" value="Need an Account?" class="left" id="needAccount"/>
+                    <input type="submit" value="Submit" class="right"/>
+                </div>
+            </form>
+        </div>
+
+        <div class="signup" style="display: none;">
+          <h2>Signup</h2>
+          <form>
+              <label for="fname">Name</label>
+              <input type="text" id="name" name="name" />
+
+              <label for="email">Email</label>
+              <input type="text" id="email2" name="email" />
+              <label for="lname">Password</label>
+              <input type="password" id="password2" name="password" placeholder="*******" />
+
+              <label for="age">Age</label>
+              <input type="text" id="age" name="age" class="third"/>
+              <label for="zipcode">Zipcode</label>
+              <input type="text" id="zipcode" name="zipcode" class="third"/>
+              <label for="phone">Phone</label>
+              <input type="text" id="phone" name="phone" class="third" />
+              <div class="center">
+                  <input type="button" value="Already have an account?" class="left" id="haveAccount"/>
+                  <input type="submit" value="Submit" class="right"/>
+              </div>
+          </form>
+        </div>
+      </div>
+
+      <div id="about">
+        <h1>About</h1>
+        <div class="about-container">
+          <div class="about-grid" id="about-grid-1">What is V4?</div>
+          <div class="about-grid" id="about-grid-2">How do I register?</div>
+          <div class="about-grid" id="about-grid-3">When did V4 start?</div>
+          <div class="about-grid" id="about-grid-4">How do I reset my password?</div>
+          <div class="about-grid" id="about-grid-5">How do I contact V4?</div>
+          <div class="about-grid" id="about-grid-6">What are badges?</div>
+        </div>
+      </div>
+
+      <div id="contact">
+        <h1>Contact</h1>
+        <h2>Reach Out to Us!</h2>
+        <h3>Email: support@v4.com</h3>
+        <h4>Support available 24/7</h4>
+      </div>
+    </main>
+
+    <script>
+      $(document).ready(function(){
+        
+        //hide login and show signup on need account button click
+        $("#needAccount").click(function(){
+          $(".login").css("display", "none");
+          $(".signup").css("display", "block");
+        });
+
+        //hide signup and show login on have account button click
+        $("#haveAccount").click(function(){
+          $(".signup").css("display", "none");
+          $(".login").css("display", "block");
+        });
+
+        $(".about-grid").hover(function(){
+          var answers = ["V4 is an application that<br>makes volunteering easy!",
+          "Scroll up to the form above<br>and click \"Need an Account?\"",
+          "V4 was designed and developed<br>by four GSU students in 2020",
+          "TBD",
+          "Email us 24/7 at support@v4.com",
+          "Badges are online rewards earned<br>by users for volunteering"
+          ];
+          var index = $(this).attr("id");
+          index = index.substr(index.length - 1) - 1;
+          $(this).html(answers[index]);
+        }, 
+        function(){
+          var questions = ["What is V4?",
+          "How do I register?",
+          "When did V4 start?",
+          "How do I reset my password?",
+          "How do I contact V4?",
+          "What are badges?"
+          ];
+          var index = $(this).attr("id");
+          index = index.substr(index.length - 1) - 1;
+          $(this).html(questions[index]);
+        });
+      });
+    </script>
+  </body>
+</html>
