@@ -17,6 +17,6 @@
         $result = mysqli_query($db, $query);
         
         //redirect back to index page so user can login
-        header("Location: http://localhost:1234/V4-project/V4/index.html");
+        header("Location: http://localhost:1234/V4/index.html");
     }
 ?>

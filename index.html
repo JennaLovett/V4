@@ -3,7 +3,7 @@
   <head>
     <title>Welcome to V4</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="/V4-project/V4/css/index.css" type="text/css" />
+    <link rel="stylesheet" href="/V4/css/index.css" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
@@ -39,27 +39,24 @@
 
         <div class="signup" style="display: none;">
           <h2>Signup</h2>
-          <form action="create_account.php" method="POST">
-              <label for="name">Name</label>
+          <form>
+              <label for="fname">Name</label>
               <input type="text" id="name" name="name" />
 
               <label for="email">Email</label>
               <input type="text" id="email2" name="email" />
-              <label for="password">Password</label>
+              <label for="lname">Password</label>
               <input type="password" id="password2" name="password" placeholder="*******" />
 
               <label for="age">Age</label>
               <input type="text" id="age" name="age" class="third"/>
-              <label for="state">State</label>
-              <input type="text" id="state" name="state" class="third"/>
               <label for="zipcode">Zipcode</label>
               <input type="text" id="zipcode" name="zipcode" class="third"/>
               <label for="phone">Phone</label>
               <input type="text" id="phone" name="phone" class="third" />
-
               <div class="center">
                   <input type="button" value="Already have an account?" class="left" id="haveAccount"/>
-                  <input type="submit" value="Submit" class="right" id="create-account-btn" />
+                  <input type="submit" value="Submit" class="right"/>
               </div>
           </form>
         </div>

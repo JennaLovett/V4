@@ -12,18 +12,20 @@
         $result = mysqli_query($db, $query);
         $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
         $userName = $row['userName'];
+        $userID = $row['userID'];
       
         $count = mysqli_num_rows($result);
-      
+        $_SESSION['user_ID'] = $userID;
         if($count == 1) 
         {
             $_SESSION['login_user'] = $userName;
+            
          
-            header("Location: http://localhost:1234/V4-project/V4/dashboard.php");
+            header("Location: http://192.168.64.2/V4/dashboard.php");
         }
         else 
         {
-            header("Location: http://localhost:1234/V4-project/V4/index.html");
+            header("Location: http://192.168.64.2/V4/index.html");
         }
     }
 ?>

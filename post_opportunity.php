@@ -1,21 +1,24 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Post New Volunteer Opportunity</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="/css/post_opportunity.css" type="text/css" />
+    <link rel="stylesheet" href="/V4-project/V4/css/post_opportunity.css" type="text/css" />
   </head>
   <body>
     <nav>
       <ul>
         <li style="float:left;"> 
-          <a href="#home" style="color: #183A37;"><strong>V4</strong></a>
-        </li>
-        <li class="hover"><a href="#Contact">Contact</a></li>
-        <li class="hover"><a href="post_oppurtunity.html"><u>Post</u></a></li>
-        <li class="hover"><a href="rewards.html">Rewards</a></li>
-        <li class="hover"><a href="#Volunteer">Volunteer</a></li>
-        <li class="hover"><a href="dashboard.php">Dashboard</a></li>
+          <a href="index.html" style="color: #183A37;"><strong>V4</strong></a>
+      </li>
+
+                <li class="hover"><a href="post_opportunity.php">Post</a></li>
+                <li class="hover"><a href="rewards.php">Rewards</a></li>
+                <li class="hover"><a href="volunteer.php">Volunteer</a></li>
+                <li class="hover"><a href="dashboard.php">Dashboard</a></li>
       </ul>
     </nav>
     <main>
