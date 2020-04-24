@@ -21,11 +21,11 @@
             $_SESSION['login_user'] = $userName;
             
          
-            header("Location: http://192.168.64.2/V4/dashboard.php");
+            header("Location: http://127.0.0.1:1234/V4-project/V4/dashboard.php");
         }
         else 
         {
-            header("Location: http://192.168.64.2/V4/index.html");
+            header("Location: http://127.0.0.1:1234/V4/index.html");
         }
     }
 ?>
