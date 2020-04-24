@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -30,7 +27,38 @@ session_start();
             </div>
 
             <div class="posts-container">
-                
+                <?php
+                    include("config.php");
+                    session_start();
+
+                    $query = "SELECT s.sessionTitle, u.userName, s.location, 
+                    s.sessionDate, s.sessionTime, s.sessionDescription, s.image, s.isHot 
+                    FROM Sessions s 
+                    INNER JOIN Users u ON s.userID = u.userID";
+
+                    $result = mysqli_query($db, $query);
+                    if (!$result) 
+                    {
+                        printf("Error: %s\n", mysqli_error($db));
+                        exit();
+                    }
+                    
+                    //store all values in array
+                    $post = array();
+                    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
+                    {
+                        $posts[] = $row;
+                    }
+                    
+                    //iterate through rows in the posts array
+                    foreach( $posts as $row )
+                    {
+                        foreach($row as $element)
+                        {
+                            echo $element . "<br>";
+                        }
+                    }
+                ?>
             </div>
         </main>
     </body>
