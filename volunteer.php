@@ -101,7 +101,7 @@
                             }
                             else if($count == 7)
                             {
-                                echo "Description: " . $element . "<br></div></div>";
+                                echo "Description: " . $element . "<br><input type='button' class='volunteer-btn' value='Volunteer'></div></div>";
                             }
                             
                             $count++;
@@ -154,7 +154,7 @@
                             }
                             else if($count == 7)
                             {
-                                echo "Description: " . $element . "<br></div></div>";
+                                echo "Description: " . $element . "<br><input type='button' class='volunteer-btn' value='Volunteer'></div></div>";
                             }
                             
                             $count++;
