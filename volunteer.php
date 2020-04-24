@@ -20,28 +20,18 @@ session_start();
                 <li class="hover"><a href="dashboard.php">Dashboard</a></li>
             </ul>
         </nav>
-        <div class="pagediv">
+
+        <main>
             <h1>Volunteer</h1>
+            
             <div class="search">
-                <input type="text" placeholder="Search...">
+                <input type="text" placeholder="Search for Opportunities...">
                 <input type="submit" value="Search" class="search_button">
             </div>
-            <div class="posts">
-                <p1><u>Recent Posts</u></p1>
-                <ol>
-                    <li>
-                        <form>
-                            <label for="title">Title:</label>
-                            <label for="owner">Owner:</label>
-                            <label for="location">Location:</label>
-                            <label for="time">Time:</label>
-                            <label for="description">Description:</label>
-                            <input type="submit" value="Join" class="join">
-                            
-                        </form>
-                    </li>
-                </ol>
+
+            <div class="posts-container">
+                
             </div>
-        </div>
+        </main>
     </body>
 </html>
