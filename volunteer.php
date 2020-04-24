@@ -31,8 +31,8 @@
                     include("config.php");
                     session_start();
 
-                    $query = "SELECT s.sessionTitle, u.userName, s.location, 
-                    s.sessionDate, s.sessionTime, s.sessionDescription, s.image, s.isHot 
+                    $query = "SELECT s.isHot, s.image, s.sessionTitle, u.userName, s.location, 
+                    s.sessionDate, s.sessionTime, s.sessionDescription   
                     FROM Sessions s 
                     INNER JOIN Users u ON s.userID = u.userID";
 
@@ -51,51 +51,114 @@
                     }
                     
                     //iterate through rows in the posts array
+                    //if it is a hot post, display first
+                    $hot_post_count = 0;
                     foreach( $posts as $row )
                     {
                         $count = 0;
-                        echo "<div class='post'>";
                         foreach($row as $element)
                         {
                             if($count == 0)
                             {
-                                echo "Title: " . $element . "<br>";
+                                if($element == 1)
+                                {
+                                    if($hot_post_count == 0)
+                                    {
+                                        echo "<h2> Hot Posts </h2>";
+                                    }
+                                    echo "<div class='post'>";
+                                    $hot_post_count++;
+                                }
+                                else
+                                {
+                                    break;
+                                }
                             }
                             else if($count == 1)
                             {
-                                echo "Owner: " . $element . "<br>";
+                                echo "<div class='post-thumb'><img src='" . $element . "' /></div>";
+                                
                             }
                             else if($count == 2)
                             {
-                                echo "Location: " . $element . "<br>";
+                                echo "<div class='post-content'><div class='hot'><img src='images/isHot.png' /></div><h3>" . $element . "</h3>";
                             }
                             else if($count == 3)
                             {
-                                echo "Date: " . $element . "<br>";
+                                echo "Owner: " . $element . "<br>";
                             }
                             else if($count == 4)
                             {
-                                echo "Time: " . $element . "<br>";
+                                echo "Location: " . $element . "<br>";
                             }
                             else if($count == 5)
                             {
-                                echo "Description: " . $element . "<br>";
+                                echo "Date: " . $element . "<br>";
                             }
                             else if($count == 6)
                             {
-                                echo "<img src='" . $element . "' />";
+                                echo "Time: " . $element . "<br>";
                             }
-                            else if($count == 8)
+                            else if($count == 7)
                             {
-                                if($element == 1)
-                                {
-                                    echo "<img src='/images/isHost.png' />";
-                                }
+                                echo "Description: " . $element . "<br></div></div>";
                             }
                             
                             $count++;
                         }
-                        echo "</div>";
+                    }
+                    
+                    //iterate through rows in the posts array
+                    //if it is not a hot post, display
+                    $regular_post_counter = 0;
+                    foreach( $posts as $row )
+                    {
+                        $count = 0;
+                        foreach($row as $element)
+                        {
+                            if($count == 0)
+                            {
+                                if($element == 1)
+                                {
+                                    break;
+                                }
+                            }
+                            else if($count == 1)
+                            {
+                                if($regular_post_counter == 0)
+                                {
+                                    echo "<h2> Recent Posts </h2>";
+                                }
+                                echo "<div class='post'><div class='post-thumb'><img src='" . $element . "' /></div>";
+                                $regular_post_counter++;
+                            }
+                            else if($count == 2)
+                            {
+                                echo "<div class='post-content'><h3>" . $element . "</h3>";
+                            }
+                            else if($count == 3)
+                            {
+                                echo "Owner: " . $element . "<br>";
+                            }
+                            else if($count == 4)
+                            {
+                                echo "Location: " . $element . "<br>";
+                            }
+                            else if($count == 5)
+                            {
+                                echo "Date: " . $element . "<br>";
+                            }
+                            else if($count == 6)
+                            {
+                                echo "Time: " . $element . "<br>";
+                            }
+                            else if($count == 7)
+                            {
+                                echo "Description: " . $element . "<br></div></div>";
+                            }
+                            
+                            $count++;
+                        }
                     }
                 ?>
             </div>
