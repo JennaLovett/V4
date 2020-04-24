@@ -53,10 +53,49 @@
                     //iterate through rows in the posts array
                     foreach( $posts as $row )
                     {
+                        $count = 0;
+                        echo "<div class='post'>";
                         foreach($row as $element)
                         {
-                            echo $element . "<br>";
+                            if($count == 0)
+                            {
+                                echo "Title: " . $element . "<br>";
+                            }
+                            else if($count == 1)
+                            {
+                                echo "Owner: " . $element . "<br>";
+                            }
+                            else if($count == 2)
+                            {
+                                echo "Location: " . $element . "<br>";
+                            }
+                            else if($count == 3)
+                            {
+                                echo "Date: " . $element . "<br>";
+                            }
+                            else if($count == 4)
+                            {
+                                echo "Time: " . $element . "<br>";
+                            }
+                            else if($count == 5)
+                            {
+                                echo "Description: " . $element . "<br>";
+                            }
+                            else if($count == 6)
+                            {
+                                echo "<img src='" . $element . "' />";
+                            }
+                            else if($count == 8)
+                            {
+                                if($element == 1)
+                                {
+                                    echo "<img src='/images/isHost.png' />";
+                                }
+                            }
+                            
+                            $count++;
                         }
+                        echo "</div>";
                     }
                 ?>
             </div>
