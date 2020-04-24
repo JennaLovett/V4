@@ -5,6 +5,7 @@ body
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 /* Nav Bar */
 ul 
 {
@@ -34,12 +35,7 @@ li a
 {
     background-color: #183A37;
 }
-#pagediv
-{
-    margin: 0;
-    padding: 100px 0px;
 
-}
 h1
 {
     text-align: center;
@@ -47,14 +43,42 @@ h1
     color: #AAFCB8; 
     font-size: 50px;
 }
-/* button field */
+
+/* main section */
+main
+{
+    margin-top: 20px;
+}
+
+/* search bar */
+.search
+{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+input[type=text]
+{
+    width: 80%;
+    padding: 16px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+ }
+  
+
 input[type=submit] 
 {
-    width: 35%;
+    width: 50%;
     background-color: rgb(24, 105, 99);
     color: white;
     padding: 14px 18px;
-    font-size: 14px;
+    font-size: 18px;
     margin-top: 8px;
     margin-bottom: 20px;
     border: none;
@@ -68,27 +92,59 @@ input[type=submit]:hover
     background-color: #183A37;
 }
 
-/* post form */
-.posts 
+/* posts */
+.posts-container
 {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 40px;
-    width: 50%;
     margin: auto;
-    margin-top: 60px;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
 }
-input[type=text] 
+
+.post
 {
-    width: 80%;
-    padding: 12px 20px;
-    margin: 8px 0 30px 0;
+    margin-bottom: 30px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px 15px;
+}
+
+.post-thumb 
+{
+    float: left;
+}
+
+.post-thumb img 
+{
+    display: block;
+    max-width: 100%;
+    height: 200px;
+}
+
+.hot img
+{
+    display: inline;
+    max-width: 50%;
+    height: 32px;
+}
+
+.post-content 
+{
+    margin-left: 150px
+}
+
+.volunteer-btn
+{
+    background-color: rgb(24, 105, 99);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
-    border: 10px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-label
-{
-    margin: 8x 0 30px 0;
+    font-size: 16px;
+    margin-top: 8px;
+    cursor: pointer;
 }
