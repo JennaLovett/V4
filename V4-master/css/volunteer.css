@@ -1,0 +1,150 @@
+/* Color palette: https://coolors.co/d7fff1-aafcb8-6aa36c-77af9c-285943   */ 
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Nav Bar */
+ul 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #285943;
+}
+  
+li 
+{
+    float: right;
+}
+  
+li a 
+{
+    font-size: 20px;
+    display: block;
+    color: #D7FFF1;
+    text-align: center;
+    padding: 16px 22px;
+    text-decoration: none;
+}
+  
+.hover a:hover 
+{
+    background-color: #183A37;
+}
+
+h1
+{
+    text-align: center;
+    margin-top: 0;
+    color: #AAFCB8; 
+    font-size: 50px;
+}
+
+/* main section */
+main
+{
+    margin-top: 20px;
+}
+
+/* search bar */
+.search
+{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+input[type=text]
+{
+    width: 80%;
+    padding: 16px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+ }
+  
+
+input[type=submit] 
+{
+    width: 50%;
+    background-color: rgb(24, 105, 99);
+    color: white;
+    padding: 14px 18px;
+    font-size: 18px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.6s;
+}
+
+input[type=submit]:hover 
+{
+    background-color: #183A37;
+}
+
+/* posts */
+.posts-container
+{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+.post
+{
+    margin-bottom: 30px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px 15px;
+}
+
+.post-thumb 
+{
+    float: left;
+}
+
+.post-thumb img 
+{
+    display: block;
+    max-width: 100%;
+    height: 200px;
+}
+
+.hot img
+{
+    display: inline;
+    max-width: 50%;
+    height: 32px;
+}
+
+.post-content 
+{
+    margin-left: 150px
+}
+
+.volunteer-btn
+{
+    background-color: rgb(24, 105, 99);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 8px;
+    cursor: pointer;
+}

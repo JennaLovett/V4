@@ -1,0 +1,94 @@
+/* Color palette: https://coolors.co/d7fff1-aafcb8-6aa36c-77af9c-285943   */ 
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Nav Bar */
+ul 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #285943;
+}
+  
+li 
+{
+    float: right;
+}
+  
+li a 
+{
+    font-size: 20px;
+    display: block;
+    color: #D7FFF1;
+    text-align: center;
+    padding: 16px 22px;
+    text-decoration: none;
+}
+  
+.hover a:hover 
+{
+    background-color: #183A37;
+}
+#pagediv
+{
+    margin: 0;
+    padding: 100px 0px;
+
+}
+h1
+{
+    text-align: center;
+    margin-top: 0;
+    color: #AAFCB8; 
+    font-size: 50px;
+}
+/* button field */
+input[type=submit] 
+{
+    width: 35%;
+    background-color: rgb(24, 105, 99);
+    color: white;
+    padding: 14px 18px;
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.6s;
+}
+
+input[type=submit]:hover 
+{
+    background-color: #183A37;
+}
+
+/* post form */
+.posts 
+{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 40px;
+    width: 50%;
+    margin: auto;
+    margin-top: 60px;
+}
+input[type=text] 
+{
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0 30px 0;
+    display: inline-block;
+    border: 10px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+label
+{
+    margin: 8x 0 30px 0;
+}

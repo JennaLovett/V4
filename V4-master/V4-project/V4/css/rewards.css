@@ -1,0 +1,283 @@
+/* Color palette: https://coolors.co/d7fff1-aafcb8-6aa36c-77af9c-285943   */ 
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Nav Bar */
+ul 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #285943;
+}
+  
+li 
+{
+    float: right;
+}
+  
+li a 
+{
+    font-size: 20px;
+    display: block;
+    color: #D7FFF1;
+    text-align: center;
+    padding: 16px 22px;
+    text-decoration: none;
+}
+  
+.hover a:hover 
+{
+    background-color: #183A37;
+}
+
+/* welcome banner */
+#login-container
+{
+    margin: 0;
+    padding: 100px 0px;
+    background-image: url(/images/mainbackground.jpg);
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+h1
+{
+    text-align: center;
+    margin-top: 0;
+    color: #AAFCB8; 
+    font-size: 50px;
+}
+.orange 
+{
+    color: #6AA36C;
+    font-weight: bold;
+}
+
+/* Login and Register Form */
+.login 
+{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 40px;
+    width: 50%;
+    margin: auto;
+    margin-top: 60px;
+}
+
+h2 
+{
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0 15px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.center {
+    margin: auto;
+    width: 100%;
+    clear: both;
+    padding: 50px 0px;
+    margin-bottom: 0px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+input[type=submit] {
+    width: 35%;
+    background-color: rgb(24, 105, 99);
+    color: white;
+    padding: 14px 18px;
+    font-size: 14px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.6s;
+}
+
+#haveAccount {
+    width: 45%;
+    background-color: #f2f2f2;
+    color: #04151F;
+    padding: 12px 16px;
+    font-size: 12.5px;
+    transition: text-decoration 0.8s, font-size 0.8s;
+}
+
+#haveAccount:hover {
+    text-decoration: underline;
+    font-size: 13px;
+}
+  
+input[type=submit]:hover {
+    background-color: #183A37;
+}
+
+/* About */
+#about {
+    margin-bottom: 20px;
+}
+#about h1 {
+    color: #77AF9C;
+    margin-top: 10px;
+}
+.about-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: auto;
+    width: 50%;
+    padding: 0px 20px;
+}
+.about-grid {
+    border: 1px solid #285943;
+    padding: 28px 32px;
+    text-align: center;
+    font-size: 22px;
+    margin: 10px 12px;
+}
+
+/* Contact */
+#contact {
+    background-color: #77AF9C;
+    text-align: center;
+    margin: 0;
+    padding: 100px 0px;
+}
+#contact h1 {
+    color: #D7FFF1;
+}
+#contact h2 {
+    color: #AAFCB8;
+}
+#contact h3, h4 {
+    color: #285943;
+}
+
+/* dashboard page*/
+a.button7{
+    justify-content: center;
+    padding: 0.7em 1.7em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    color:#FFFFFF;
+    background-color:#3369ff;
+    box-shadow:inset 0 -0.6em 1em -0.35em rgba(0,0,0,0.17),inset 0 0.6em 2em -0.3em rgba(255,255,255,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+    text-align:center;
+    position:relative;
+}
+a.button7:active{
+    box-shadow:inset 0 0.6em 2em -0.3em rgba(0,0,0,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+    
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+/* Opportunites */
+.leftpane {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    height: 100%;
+    float: left;
+    border-collapse: collapse;
+    
+}
+
+/* Your Sessions */
+.middlepane {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    float: left;
+    
+}
+
+/* Statistics */
+.rightpane {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    height: 100%;
+    position: relative;
+    float: right;
+    border-collapse: collapse;
+}
+
+.toppane {
+    background-color: #6AA36C;
+    width: 100%;
+    height: 100px;
+    border-collapse: collapse;
+}
+
+.header {
+    margin: 50px;
+}
+
+/* Rewards */
+.rewards-container {
+    margin: auto;
+}
+
+table {
+    margin: auto;
+    width: 90%;
+    border-collapse: collapse;
+    border: 2px solid;
+    border-color: #183A37;
+}
+
+.th1 {
+    background-color: rgb(27, 66, 63);
+    color: white;
+}
+
+.th2 {
+    background-color: #2c6149;
+    color: #AAFCB8;
+}
+
+td {
+    vertical-align: middle;
+}
+
+td:nth-child(3n+1), td:nth-child(3n+3) {
+    text-align: center;
+}
+
+td:nth-child(3n) {
+    border-right: 2px solid;
+    border-color: #183A37;
+}
