@@ -1,0 +1,316 @@
+/* Color palette: https://coolors.co/d7fff1-aafcb8-6aa36c-77af9c-285943   */ 
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Nav Bar */
+ul 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #285943;
+}
+  
+li 
+{
+    float: right;
+}
+  
+li a 
+{
+    font-size: 20px;
+    display: block;
+    color: #D7FFF1;
+    text-align: center;
+    padding: 16px 22px;
+    text-decoration: none;
+}
+  
+.hover a:hover 
+{
+    background-color: #183A37;
+}
+
+/* welcome banner */
+#login-container
+{
+    margin: 0;
+    padding: 100px 0px;
+    background-image: url(../images/mainbackground.jpg);
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+h1
+{
+    text-align: center;
+    margin-top: 0;
+    color: #AAFCB8; 
+    font-size: 50px;
+}
+.orange 
+{
+    color: #6AA36C;
+    font-weight: bold;
+}
+
+/* Login and Register Form */
+.login, .signup
+{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 40px;
+    width: 50%;
+    margin: auto;
+    margin-top: 60px;
+}
+
+h2 
+{
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+input[type=text], input[type=password] 
+{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0 15px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.third input[type=text]
+{
+    
+}
+
+.center 
+{
+    margin: auto;
+    width: 100%;
+    clear: both;
+    padding: 50px 0px;
+    margin-bottom: 0px;
+}
+
+.left
+{
+    float: left;
+}
+
+.right
+{
+    float: right;
+}
+
+input[type=submit], input[type=button] 
+{
+    width: 35%;
+    background-color: rgb(24, 105, 99);
+    color: white;
+    padding: 14px 18px;
+    font-size: 18px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.6s;
+}
+
+#haveAccount, #needAccount 
+{
+    width: 45%;
+    background-color: #f2f2f2;
+    color: #04151F;
+    padding: 12px 16px;
+    font-size: 12.5px;
+    transition: text-decoration 0.8s, font-size 0.8s;
+}
+
+#haveAccount:hover, #needAccount:hover 
+{
+    text-decoration: underline;
+    font-size: 13px;
+}
+  
+input[type=submit]:hover 
+{
+    background-color: #183A37;
+}
+
+/* About */
+#about
+{
+    margin-bottom: 20px;
+}
+#about h1
+{
+    color: #77AF9C;
+    margin-top: 10px;
+}
+.about-container
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: auto;
+    width: 50%;
+    padding: 0px 20px;
+}
+.about-grid
+{
+    border: 1px solid #285943;
+    padding: 28px 32px;
+    text-align: center;
+    font-size: 22px;
+    margin: 10px 12px;
+    transition: font-size 0.8s, background-color 0.8s, border 0.8s;
+}
+
+.about-grid:hover
+{
+    background-color: #AAFCB8;
+    font-size: 24px;
+    border: 2px solid #285943;
+}
+
+/* Contact */
+#contact
+{
+    background-color: #77AF9C;
+    text-align: center;
+    margin: 0;
+    padding: 100px 0px;
+}
+#contact h1
+{
+    color: #D7FFF1;
+}
+#contact h2
+{
+    color: #AAFCB8;
+}
+#contact h3, h4
+{
+    color: #285943;
+}
+
+/*dashboard page*/
+
+    body, html {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+      
+      .container {
+        width: 100%;
+        height: 100%;
+      }
+      /*your sessions */
+      .leftpane {
+          width: 25%;
+          height: 100%;
+          float: left;
+         
+          
+      }
+      /*Your Opportunities */
+      .middlepane {
+          width: 50%;
+          height: 100%;
+          float: left;
+      }
+      #button {
+          line-height: 5px;
+        width: 20px;
+        height: 18px;
+        font-size: 12px;
+        font-family: tahoma;
+        margin-top: 0px;
+        margin-right: 0px;
+        position:absolute;
+        top:auto;
+        float: left;
+        
+        text-align: left;
+    }
+
+      /*Statistics */
+      #h3m, #h3l, #h3r{
+        width: none;
+        height: none;
+        justify-content: center;
+        white-space: pre-line;
+        text-align: center;
+    }
+      .p1{
+          text-align: left;
+          width: none;
+          height: none;
+          justify-content: unset;
+          
+      }
+      .rightpane {
+        width: 25%;
+        height: 100%;
+        position: relative;
+        float: right;
+        border-collapse: collapse;
+      }
+      
+      #pieChart{
+          text-align: center;
+      }
+      .toppane {
+        background-color: #6AA36C;
+        width: 100%;
+        height: 100px;
+        border-collapse: collapse;
+      }
+      
+      .header {
+          margin: 50px;
+      }
+
+      img{
+        float: right;
+      }
+
+      .borders{
+          border: solid black 1px;
+          padding: 12px;
+      }
+
+      .collapsible {
+        color: #77AF9C;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+      }
+      
+      /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+      .active, .collapsible:hover {
+        background-color: #77AF9C;
+      }
+      
+      /* Style the collapsible content. Note: hidden by default */
+      .content {
+        padding: 0 18px;
+        display: none;
+        overflow: visible;
+        background-color: #f1f1f1;
+        text-align: left;
+      }
+      

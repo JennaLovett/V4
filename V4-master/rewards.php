@@ -1,0 +1,88 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/rewards.css" type="text/css" />
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li style="float:left;">
+                    <a href="index.html" style="color: #183A37;"><strong>V4</strong></a>
+      </li>
+
+                <li class="hover"><a href="post_opportunity.php">Post</a></li>
+                <li class="hover"><a href="rewards.php">Rewards</a></li>
+                <li class="hover"><a href="volunteer.php">Volunteer</a></li>
+                <li class="hover"><a href="dashboard.php">Dashboard</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div id="rewards-container">
+                <h1>Rewards</h1>
+                <h2><center>#3 this month</center></h2>
+                <div id="rewards-table">
+                    <table>
+                        <thead>
+                            <tr class="th1">
+                                <th colspan="3">All Time</th>
+                                <th colspan="3">This Month</th>
+                                <th colspan="3">This Week</th>
+                            </tr>
+                            <tr class="th2">
+                                <th>Rank</th>
+                                <th>Volunteer</th>
+                                <th>Hours</th>
+                                <th>Rank</th>
+                                <th>Volunteer</th>
+                                <th>Hours</th>
+                                <th>Rank</th>
+                                <th>Volunteer</th>
+                                <th>Hours</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td></td>
+                                <td></td>
+                                <td>3</td>
+                                <td></td>
+                                <td></td>
+                                <td>3</td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
