@@ -1,25 +1,12 @@
 <?php
-include("config.php");
 session_start();
-$userID = $_SESSION['user_ID'];
-
-//$query = "SELECT * FROM Users";
-$query = "SELECT u.userName as un, sum(s.estimatedHours) as sumHrs
-FROM Users u
-LEFT OUTER JOIN Session_Volunteers v ON u.userID = v.userID
-LEFT OUTER JOIN Sessions s ON v.idsession = s.idsession
-GROUP BY v.userID
-ORDER BY sumHrs DESC;";
-$result = mysqli_query($db, $query);
-
-if(!$result) {
-    die('Could not get data: ' . mysql_error());
- }
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Rewards</title>
+        <title>
+
+        </title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="css/rewards.css" type="text/css" />
     </head>
@@ -59,14 +46,10 @@ if(!$result) {
                                 <th>Volunteer</th>
                                 <th>Hours</th>
                             </tr>
-                            <?php 
-                                $count = 1;
-                                while($r = mysqli_fetch_array($result)):
-                            ?>
                             <tr>
-                                <td><?php echo $count; ?></td>
-                                <td><?php echo $r['un']; ?></td>
-                                <td><?php echo $r['sumHrs']; ?></td>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
                                 <td>1</td>
                                 <td></td>
                                 <td></td>
@@ -74,13 +57,28 @@ if(!$result) {
                                 <td></td>
                                 <td></td>
                               </tr>
-                              <?php
-                                $count += 1;
-                                if($count > 10){
-                                    break;
-                                }
-                                endwhile;
-                              ?>
+                              <tr>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td></td>
+                                <td></td>
+                                <td>3</td>
+                                <td></td>
+                                <td></td>
+                                <td>3</td>
+                                <td></td>
+                                <td></td>
+                              </tr>
                         </thead>
                     </table>
                 </div>

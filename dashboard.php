@@ -7,8 +7,12 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/index.css" type="text/css" />
+    <link rel="stylesheet" href="css/index.css" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    
 </head>
+
 
 <body>
 <nav>
@@ -30,9 +34,10 @@ session_start();
 
         <div class="leftpane">
             <h3 id="h3l">Your Sessions</h3>
-                <button type="button" class="collapsible"><span>+</span> <strong>What you've posted</strong></button>
+                <button type="button" class="collapsible"><span>+</span><strong>What you've posted</strong></button>
             <div class="content">
-                <?php
+                
+                    <?php
                     $query = "select * from Sessions where userID = '$userID';";
 
                                 $row = mysqli_query($db, $query);
@@ -57,6 +62,7 @@ session_start();
             </div>
             <button type="button" class="collapsible"><span>+</span> <strong>Your Past Sessions</strong></button>
             <div class="content">
+
                 <?php
                     $query = "select * from Sessions where userID = '$userID';";
 
@@ -100,33 +106,30 @@ session_start();
 
         <div class="middlepane">
             <h3 id="h3m">Opportunities Volunteered For</h3>
+        
 
-                <?php
-                    $query = "select * from Sessions where userID = '$userID';";
-
-                        $row = mysqli_query($db, $query);
-
-
+                    <?php
                     foreach($row as $r){
 
                         echo "<div class=\"borders\">";
                         $img_path = $r['image'];
 
-                        echo "<img src= \"$img_path \" alt=\"Corgi\" height=\"130\" width=\"250\">";
+                        echo "<img src= \"$img_path \" alt=\"Corgi\" height=\"160\" width=\"250\">";
 
                         echo "<p class=\"p1\">";
 
-                        echo "<strong>" .$r['sessionTitle'] ."</strong>";
-                        echo "<br>" .$r['sessionDescription'] ."<br><strong>Date Needed:</strong>";
-                        echo "<br>" .$r['sessionDate'] ."<br><br><strong>Location: </strong>" .$r['location'];
-
+                        echo "<center><strong>" .$r['sessionTitle'] ."</strong></center>";
+                        echo "<br><strong>Description: </strong>" .$r['sessionDescription'] ."<br><br><strong>Date & Time Needed:</strong>";
+                        echo "<br>" .$r['sessionTime'] ."";
+                        echo "<br>" .$r['sessionDate'] ."<br><br>";
+                        echo "<strong>Location: </strong>" .$r['location'] ."";
                         echo "</p>";
 
                         echo "</div>";
 
                     }
+            echo "</center>";
                         ?>
-
         </div>
 
         <div class="rightpane">
@@ -167,9 +170,34 @@ session_start();
                   chart.draw(data, options);
                 }
             </script>
+
+<form action = "removeSession.php" method="POST">
+<hr>
+<?php
+     $x = 1;
+    
+    $query = "select * from Sessions where userID = '$userID';";
+
+    $row = mysqli_query($db, $query);
+    echo "<center>";
+    echo "<label >Remove A Session:</label>";
+    echo "<select name=\"idNum\">";
+   
+    
+    foreach($row as $r){
+              
+        echo "<option value=\"$x\">" .$r['sessionTitle'] ."</option>";
+        $x = $x + 1;
+        
+    }
+    echo "</select>";
+    ?>
+    <input type="submit">
+    
+    </form>
         </div>
 
-    </div>
+    
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-/* Color palette: https://coolors.co/d7fff1-aafcb8-6aa36c-77af9c-285943   */ 
+/* Color palette: https://coolors.co/d7fff1-aafcb8-6aa36c-77af9c-285943   */
 body
 {
     margin: 0;
@@ -7,7 +7,7 @@ body
 }
 
 /* Nav Bar */
-ul 
+ul
 {
     list-style-type: none;
     margin: 0;
@@ -15,13 +15,13 @@ ul
     overflow: hidden;
     background-color: #285943;
 }
-  
-li 
+
+li
 {
     float: right;
 }
-  
-li a 
+
+li a
 {
     font-size: 20px;
     display: block;
@@ -30,8 +30,8 @@ li a
     padding: 16px 22px;
     text-decoration: none;
 }
-  
-.hover a:hover 
+
+.hover a:hover
 {
     background-color: #183A37;
 }
@@ -49,10 +49,10 @@ h1
 {
     text-align: center;
     margin-top: 0;
-    color: #AAFCB8; 
+    color: #AAFCB8;
     font-size: 50px;
 }
-.orange 
+.orange
 {
     color: #6AA36C;
     font-weight: bold;
@@ -69,13 +69,13 @@ h1
     margin-top: 60px;
 }
 
-h2 
+h2
 {
     margin-bottom: 20px;
     margin-top: 0px;
 }
 
-input[type=text], input[type=password] 
+input[type=text], input[type=password]
 {
     width: 100%;
     padding: 12px 20px;
@@ -88,10 +88,10 @@ input[type=text], input[type=password]
 
 .third input[type=text]
 {
-    
+
 }
 
-.center 
+.center
 {
     margin: auto;
     width: 100%;
@@ -110,7 +110,7 @@ input[type=text], input[type=password]
     float: right;
 }
 
-input[type=submit], input[type=button] 
+input[type=submit], input[type=button]
 {
     width: 35%;
     background-color: rgb(24, 105, 99);
@@ -124,7 +124,7 @@ input[type=submit], input[type=button]
     transition: background-color 0.6s;
 }
 
-#haveAccount, #needAccount 
+#haveAccount, #needAccount
 {
     width: 45%;
     background-color: #f2f2f2;
@@ -134,13 +134,13 @@ input[type=submit], input[type=button]
     transition: text-decoration 0.8s, font-size 0.8s;
 }
 
-#haveAccount:hover, #needAccount:hover 
+#haveAccount:hover, #needAccount:hover
 {
     text-decoration: underline;
     font-size: 13px;
 }
-  
-input[type=submit]:hover 
+
+input[type=submit]:hover
 {
     background-color: #183A37;
 }
@@ -208,7 +208,7 @@ input[type=submit]:hover
         height: 100%;
         margin: 0;
       }
-      
+
       .container {
         width: 100%;
         height: 100%;
@@ -218,8 +218,8 @@ input[type=submit]:hover
           width: 25%;
           height: 100%;
           float: left;
-         
-          
+
+
       }
       /*Your Opportunities */
       .middlepane {
@@ -238,7 +238,7 @@ input[type=submit]:hover
         position:absolute;
         top:auto;
         float: left;
-        
+
         text-align: left;
     }
 
@@ -255,7 +255,7 @@ input[type=submit]:hover
           width: none;
           height: none;
           justify-content: unset;
-          
+
       }
       .rightpane {
         width: 25%;
@@ -264,7 +264,7 @@ input[type=submit]:hover
         float: right;
         border-collapse: collapse;
       }
-      
+
       #pieChart{
           text-align: center;
       }
@@ -274,7 +274,7 @@ input[type=submit]:hover
         height: 100px;
         border-collapse: collapse;
       }
-      
+
       .header {
           margin: 50px;
       }
@@ -299,12 +299,12 @@ input[type=submit]:hover
         outline: none;
         font-size: 15px;
       }
-      
+
       /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
       .active, .collapsible:hover {
         background-color: #77AF9C;
       }
-      
+
       /* Style the collapsible content. Note: hidden by default */
       .content {
         padding: 0 18px;
@@ -313,4 +313,3 @@ input[type=submit]:hover
         background-color: #f1f1f1;
         text-align: left;
       }
-      
