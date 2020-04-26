@@ -1,5 +1,4 @@
 <?php
-include("config.php");
 session_start();
 $userID = $_SESSION['user_ID'];
 
@@ -28,7 +27,9 @@ if(!$badgeImgs) {
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Rewards</title>
+        <title>
+
+        </title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="css/rewards.css" type="text/css" />
     </head>
@@ -75,10 +76,6 @@ if(!$badgeImgs) {
                                 <th>Volunteer</th>
                                 <th>Hours</th> -->
                             </tr>
-                            <?php 
-                                $count = 1;
-                                while($r = mysqli_fetch_array($result)):
-                            ?>
                             <tr>
                                 <td><?php echo $count; ?></td>
                                 <td><?php echo $r['un']; ?></td>
@@ -90,13 +87,6 @@ if(!$badgeImgs) {
                                 <td></td>
                                 <td></td> -->
                               </tr>
-                              <?php
-                                $count += 1;
-                                if($count > 10){
-                                    break;
-                                }
-                                endwhile;
-                              ?>
                         </thead>
                     </table>
                 </div>

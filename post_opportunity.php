@@ -6,7 +6,7 @@ session_start();
   <head>
     <title>Post New Volunteer Opportunity</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="/V4-project/V4/css/post_opportunity.css" type="text/css" />
+    <link rel="stylesheet" href="css/post_opportunity.css" type="text/css" />
   </head>
   <body>
     <nav>
