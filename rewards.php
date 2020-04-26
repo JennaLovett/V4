@@ -9,10 +9,19 @@ FROM Users u
 LEFT OUTER JOIN Session_Volunteers v ON u.userID = v.userID
 LEFT OUTER JOIN Sessions s ON v.idsession = s.idsession
 GROUP BY v.userID
-ORDER BY sumHrs DESC;";
+ORDER BY sumHrs DESC";
 $result = mysqli_query($db, $query);
 
-if(!$result) {
+if(!$result) { 
+    die('Could not get data: ' . mysql_error());
+ }
+
+$badgeQuery = "SELECT badgeImage, badgeDescription
+FROM Rewards
+WHERE userID = $userID";
+$badgeImgs = mysqli_query($db, $badgeQuery);
+
+if(!$badgeImgs) {
     die('Could not get data: ' . mysql_error());
  }
 ?>
@@ -39,25 +48,32 @@ if(!$result) {
         <main>
             <div id="rewards-container">
                 <h1>Rewards</h1>
-                <h2><center>#3 this month</center></h2>
+                <div id="badges">
+                    <h2><center>
+                        <?php while($q = mysqli_fetch_array($badgeImgs)):
+                            echo "<img src=" . $q['badgeImage'] . " alt=\"" . $q['badgeDescription'] . "\" title=\"" . $q['badgeDescription'] . "\" height=\"100\" width=\"100\">"; 
+                            endwhile;
+                        ?>
+                    </center></h2>
+                </div>
                 <div id="rewards-table">
                     <table>
                         <thead>
                             <tr class="th1">
-                                <th colspan="3">All Time</th>
-                                <th colspan="3">This Month</th>
-                                <th colspan="3">This Week</th>
+                                <th colspan="3">Leaderboard</th>
+<!--                                 <th colspan="3">This Month</th>
+                                <th colspan="3">This Week</th> -->
                             </tr>
                             <tr class="th2">
                                 <th>Rank</th>
                                 <th>Volunteer</th>
                                 <th>Hours</th>
-                                <th>Rank</th>
+                              <!--   <th>Rank</th>
                                 <th>Volunteer</th>
                                 <th>Hours</th>
                                 <th>Rank</th>
                                 <th>Volunteer</th>
-                                <th>Hours</th>
+                                <th>Hours</th> -->
                             </tr>
                             <?php 
                                 $count = 1;
@@ -67,12 +83,12 @@ if(!$result) {
                                 <td><?php echo $count; ?></td>
                                 <td><?php echo $r['un']; ?></td>
                                 <td><?php echo $r['sumHrs']; ?></td>
-                                <td>1</td>
+                            <!--     <td>1</td>
                                 <td></td>
                                 <td></td>
                                 <td>1</td>
                                 <td></td>
-                                <td></td>
+                                <td></td> -->
                               </tr>
                               <?php
                                 $count += 1;
