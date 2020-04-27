@@ -1,4 +1,5 @@
 <?php
+include ("config.php");
 session_start();
 $userID = $_SESSION['user_ID'];
 
@@ -13,7 +14,7 @@ $result = mysqli_query($db, $query);
 
 if(!$result) { 
     die('Could not get data: ' . mysql_error());
- }
+}
 
 $badgeQuery = "SELECT badgeImage, badgeDescription
 FROM Rewards
@@ -22,7 +23,7 @@ $badgeImgs = mysqli_query($db, $badgeQuery);
 
 if(!$badgeImgs) {
     die('Could not get data: ' . mysql_error());
- }
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -52,7 +53,7 @@ if(!$badgeImgs) {
                 <div id="badges">
                     <h2><center>
                         <?php while($q = mysqli_fetch_array($badgeImgs)):
-                            echo "<img src=" . $q['badgeImage'] . " alt=\"" . $q['badgeDescription'] . "\" title=\"" . $q['badgeDescription'] . "\" height=\"100\" width=\"100\">"; 
+                            echo "<img src=" . $q['badgeImage'] . " alt=\"" . $q['badgeDescription'] . "\" title=\"" . $q['badgeDescription'] . "\" height=\"200\" width=\"200\">"; 
                             endwhile;
                         ?>
                     </center></h2>
@@ -76,6 +77,10 @@ if(!$badgeImgs) {
                                 <th>Volunteer</th>
                                 <th>Hours</th> -->
                             </tr>
+                            <?php
+                                $count = 1;
+                                while($r = mysqli_fetch_array($result)):
+                            ?>
                             <tr>
                                 <td><?php echo $count; ?></td>
                                 <td><?php echo $r['un']; ?></td>
@@ -86,7 +91,11 @@ if(!$badgeImgs) {
                                 <td>1</td>
                                 <td></td>
                                 <td></td> -->
-                              </tr>
+                            </tr>
+                            <?php 
+                                $count += 1;
+                                endwhile;
+                            ?>
                         </thead>
                     </table>
                 </div>
