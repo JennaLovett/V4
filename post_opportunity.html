@@ -1,30 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Post New Volunteer Opportunity</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="/css/post_opportunity.css" type="text/css" />
+    <link rel="stylesheet" href="css/post_opportunity.css" type="text/css" />
   </head>
   <body>
     <nav>
       <ul>
         <li style="float:left;"> 
-          <a href="#home" style="color: #183A37;"><strong>V4</strong></a>
-        </li>
-        <li class="hover"><a href="#Contact">Contact</a></li>
-        <li class="hover"><a href="post_oppurtunity.html"><u>Post</u></a></li>
-        <li class="hover"><a href="rewards.html">Rewards</a></li>
-        <li class="hover"><a href="#Volunteer">Volunteer</a></li>
-        <li class="hover"><a href="dashboard.php">Dashboard</a></li>
+          <a href="index.html" style="color: #183A37;"><strong>V4</strong></a>
+      </li>
+
+                <li class="hover"><a href="post_opportunity.html">Post</a></li>
+                <li class="hover"><a href="rewards.php">Rewards</a></li>
+                <li class="hover"><a href="volunteer.php">Volunteer</a></li>
+                <li class="hover"><a href="dashboard.php">Dashboard</a></li>
       </ul>
     </nav>
     <main>
         <div id="Post-container">
             <h1>Post New Volunteer Opportunity</h1>
             <div id="post">
-                <form>
+                <form action="post_opportunity.php" method="post">
                     <label for="title">Title</label>
-                    <input type="text" id="title" name="title"placeholder="IE: Deliver my Grandma's Meds"  />
+                    <input type="text" id="title" name="title" placeholder="IE: Deliver my Grandma's Meds"  />
 
                     <label for="location">Location</label>
                     <input type="text" id="location" name="location" placeholder="Atlanta" />
