@@ -260,11 +260,13 @@ table {
 }
 
 .th1 {
+    padding: 10px;
     background-color: rgb(27, 66, 63);
     color: white;
 }
 
 .th2 {
+    padding: 10px;
     background-color: #2c6149;
     color: #AAFCB8;
 }
