@@ -3,7 +3,6 @@ include ("config.php");
 session_start();
 $userID = $_SESSION['user_ID'];
 
-//$query = "SELECT * FROM Users";
 $query = "SELECT u.userName as un, sum(s.estimatedHours) as sumHrs
 FROM Users u
 LEFT OUTER JOIN Session_Volunteers v ON u.userID = v.userID
@@ -59,23 +58,15 @@ if(!$badgeImgs) {
                     </center></h2>
                 </div>
                 <div id="rewards-table">
-                    <table>
+                    <table style="width: 60%;">
                         <thead>
                             <tr class="th1">
                                 <th colspan="3">Leaderboard</th>
-<!--                                 <th colspan="3">This Month</th>
-                                <th colspan="3">This Week</th> -->
                             </tr>
                             <tr class="th2">
                                 <th>Rank</th>
                                 <th>Volunteer</th>
                                 <th>Hours</th>
-                              <!--   <th>Rank</th>
-                                <th>Volunteer</th>
-                                <th>Hours</th>
-                                <th>Rank</th>
-                                <th>Volunteer</th>
-                                <th>Hours</th> -->
                             </tr>
                             <?php
                                 $count = 1;
@@ -83,16 +74,13 @@ if(!$badgeImgs) {
                             ?>
                             <tr>
                                 <td><?php echo $count; ?></td>
-                                <td><?php echo $r['un']; ?></td>
+                                <td style="text-align: center;"><?php echo $r['un']; ?></td>
                                 <td><?php echo $r['sumHrs']; ?></td>
-                            <!--     <td>1</td>
-                                <td></td>
-                                <td></td>
-                                <td>1</td>
-                                <td></td>
-                                <td></td> -->
                             </tr>
                             <?php 
+                                if($count == 10){
+                                break;
+                                }
                                 $count += 1;
                                 endwhile;
                             ?>
