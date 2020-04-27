@@ -3,11 +3,11 @@ include ("config.php");
 session_start();
 $userID = $_SESSION['user_ID'];
 
-$query = "SELECT u.userName as un, sum(s.estimatedHours) as sumHrs
+$query = "SELECT u.userName as un, IFNULL(sum(s.estimatedHours), 0) as sumHrs
 FROM Users u
 LEFT OUTER JOIN Session_Volunteers v ON u.userID = v.userID
 LEFT OUTER JOIN Sessions s ON v.idsession = s.idsession
-GROUP BY v.userID
+GROUP BY u.userID
 ORDER BY sumHrs DESC";
 $result = mysqli_query($db, $query);
 
