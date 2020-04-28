@@ -14,6 +14,7 @@
     $fileToUpload = mysqli_real_escape_string($db, $_POST['fileToUpload']);
 
     $sql = "INSERT INTO Sessions (sessionTitle, location, date, time, sessionDescription, estimatedHours, vol_num, fileToUpload) VALUES ('$title', '$location', '$date', '$time', '$description', '$estimated_duration', '$vol_num', '$fileToUpload')";
+    mysqli_query($db, $sql);
     header("refresh:0; url=post_opportunity.html");
   }
 ?>
