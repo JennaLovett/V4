@@ -1,3 +1,7 @@
+<?php
+session_start();
+include("config.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -28,11 +32,8 @@
 
             <div class="posts-container">
                 <?php
-                    include("config.php");
-                    session_start();
-
                     $query = "SELECT s.isHot, s.image, s.sessionTitle, u.userName, s.location, 
-                    s.sessionDate, s.sessionTime, s.sessionDescription   
+                    s.sessionDate, s.sessionTime, s.sessionDescription, s.idSession   
                     FROM Sessions s 
                     INNER JOIN Users u ON s.userID = u.userID";
 
@@ -81,7 +82,7 @@
                             }
                             else if($count == 2)
                             {
-                                echo "<div class='post-content'><div class='hot'><img src='images/isHot.png' /></div><h3>" . $element . "</h3>";
+                                echo "<div class='post-content'><form method='post' action='join_opportunity.php'><div class='hot'><img src='images/isHot.png' /></div><h3>" . $element . "</h3>";
                             }
                             else if($count == 3)
                             {
@@ -101,7 +102,11 @@
                             }
                             else if($count == 7)
                             {
-                                echo "Description: " . $element . "<br><input type='button' class='volunteer-btn' value='Volunteer'></div></div>";
+                                echo "Description: " . $element . "<br>";
+                            }
+                            else if($count == 8)
+                            {
+                                echo "<input type='hidden' name='idSession' value='" . $element . "'><input type='submit' class='volunteer-btn' value='Volunteer'></form></div></div>";
                             }
                             
                             $count++;
@@ -129,7 +134,7 @@
                                 {
                                     echo "<h2> Recent Posts </h2>";
                                 }
-                                echo "<div class='post'><div class='post-thumb'><img src='" . $element . "' /></div>";
+                                echo "<div class='post'><form method='post' action='join_opportunity.php'><div class='post-thumb'><img src='" . $element . "' /></div>";
                                 $regular_post_counter++;
                             }
                             else if($count == 2)
@@ -154,7 +159,11 @@
                             }
                             else if($count == 7)
                             {
-                                echo "Description: " . $element . "<br><input type='button' class='volunteer-btn' value='Volunteer'></div></div>";
+                                echo "Description: " . $element . "<br>";
+                            }
+                            else if($count == 8)
+                            {
+                                echo "<input type='hidden' name='idSession' value='" . $element . "'><input type='submit' class='volunteer-btn' value='Volunteer'></form></div></div>";
                             }
                             
                             $count++;

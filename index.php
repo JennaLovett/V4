@@ -17,20 +17,22 @@
       
         $count = mysqli_num_rows($result);
        
+        //set session variables
+        $_SESSION['login_user'] = $userName;
+        $_SESSION['user_ID'] = $userID; 
+
         //if user exists
         if($count == 1) 
-        {
-            //set session variables
-            $_SESSION['login_user'] = $userName;
-            $_SESSION['user_ID'] = $userID;            
-         
+        {  
             //redirect to dashboard
-            header("Location: http://192.168.64.2/V4/dashboard.php");
+            header("Location: http://127.0.0.1:1234/V4/dashboard.php");
+            exit();
         }
         else 
         {
             //redirect to index page
-            header("Location: http://127.0.0.1:1234/V4-project/V4/index.html");
+            header("Location: http://127.0.0.1:1234/V4/index.html");
+            exit();
         }
     }
 ?>
