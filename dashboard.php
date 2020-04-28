@@ -64,11 +64,13 @@ session_start();
             <div class="content">
 
                 <?php
-                    $query = "select * from Sessions where userID = '$userID';";
+                    $query = "select Sessions.sessionTitle, Sessions.estimatedHours, Sessions.sessionDescription, Sessions.location, Sessions.sessionDate, Sessions.sessionTime, Sessions.image from Session_Volunteers right join Sessions on Session_Volunteers.idSession = Sessions.idSession where Session_Volunteers.userID = '$userID';";
 
                             $row = mysqli_query($db, $query);
 
-
+                    
+                        
+                    
 
                                     foreach($row as $r){
 
@@ -83,7 +85,7 @@ session_start();
 
                                         echo "</p>";
                                     }
-
+                    
                 ?>
             </div>
                 <script>
@@ -109,6 +111,8 @@ session_start();
         
 
                     <?php
+                        $query = "select Sessions.sessionTitle, Sessions.estimatedHours, Sessions.sessionDescription, Sessions.location, Sessions.sessionDate, Sessions.sessionTime, Sessions.image from Session_Volunteers right join Sessions on Session_Volunteers.idSession = Sessions.idSession where Session_Volunteers.userID = '$userID';";
+                        
                     foreach($row as $r){
 
                         echo "<div class=\"borders\">";
@@ -151,7 +155,7 @@ session_start();
                   ['Tasks Completed', 'Hours Volunteered'],
 
                    <?php
-                        $query = "select * from Sessions where userID = '$userID';";
+                        $query = "select Sessions.sessionTitle, Sessions.estimatedHours from Session_Volunteers right join Sessions on Session_Volunteers.idSession = Sessions.idSession where Session_Volunteers.userID = '$userID';";
 
                         $row = mysqli_query($db, $query);
 
@@ -176,7 +180,7 @@ session_start();
 <?php
      $x = 1;
     
-    $query = "select * from Sessions where userID = '$userID';";
+   $query = "select Sessions.sessionTitle from Session_Volunteers right join Sessions on Session_Volunteers.idSession = Sessions.idSession where Session_Volunteers.userID = '$userID';";
 
     $row = mysqli_query($db, $query);
     echo "<center>";
@@ -195,6 +199,10 @@ session_start();
     <input type="submit">
     
     </form>
+
+    <p>Don't worry! We will let the poster know you can no longer volunteer!</p>
+    <h3> News </h3>
+    <p> New addition to V4! Users can now vote if your post is 'Hot!' This will put your post higher on the feed! </p>
         </div>
 
     
