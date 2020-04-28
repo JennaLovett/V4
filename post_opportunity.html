@@ -23,7 +23,7 @@
         <div id="Post-container">
             <h1>Post New Volunteer Opportunity</h1>
             <div id="post">
-                <form action="post_opportunity.php" method="post">
+                <form action="post_opportunity.php" method="POST">
                     <label for="title">Title</label>
                     <input type="text" id="title" name="title" placeholder="IE: Deliver my Grandma's Meds"  />
 
@@ -37,14 +37,14 @@
                     <input type="time" id="time" name="time" placeholder="12:00 PM" />
                     <div></div>
                     <label for="description">Description</label>
-                    <textarea id="description" rows="4" cols="50" placeholder="Enter additional details here" ></textarea>
+                    <input type ="text" id="description" name="description" placeholder="Enter additional details here" />
                     <div></div>
                     <label for="estimated_duration">Estimated Duration</label>
-                    <input type="number" id="estimated_duration" name="estimated_duration" placeholder="30" />
+                    <input type="text" id="estimated_duration" name="estimated_duration" placeholder="30" />
                     <select id="time_type" name="time_type">
-                        <option value="minutes">minutes</option>
+                        
                         <option value="hours">hours</option>
-                        <option value="days">days</option>
+                        
                     </select>
                     <div></div>
                     <label for="vol_num"># Volunteers Needed</label>

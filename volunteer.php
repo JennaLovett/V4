@@ -11,7 +11,7 @@
                     <a href="index.html" style="color: #183A37;"><strong>V4</strong></a>
       </li>
 
-                <li class="hover"><a href="post_opportunity.php">Post</a></li>
+                <li class="hover"><a href="post_opportunity.html">Post</a></li>
                 <li class="hover"><a href="rewards.php">Rewards</a></li>
                 <li class="hover"><a href="volunteer.php">Volunteer</a></li>
                 <li class="hover"><a href="dashboard.php">Dashboard</a></li>
